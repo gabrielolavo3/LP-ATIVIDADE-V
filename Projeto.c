@@ -29,8 +29,8 @@ int main ( ) {
         printf ("Código | Descrição\n");
         printf ("   1   | Cadastrar produto\n");
         printf ("   2   | Listar produto\n");
-        printf ("   3   | Saída de mercadoria\n");
-        printf ("   4   | Localização do produto\n");
+        printf ("   3   | Adicionar localização do produto\n");
+        printf ("   4   | Saída de mercadoria\n");
         printf ("   5   | Sair do algoritmo\n\n");
         printf ("Selecione a opção desejada: ");
         scanf ("%d", &opcao);
@@ -58,8 +58,9 @@ int main ( ) {
              printf ("Nome do %dº produto: %s\n", b+1, nome[b]);
              printf ("Código do produto: %s\n", codigo_do_produto[b]);
              printf ("Quantidade do produto: %d\n", quantidade[b]);
+            printf ("\n");
           }
-             printf ("Preço total: R$ %2f\n\n", quantia);      
+             printf ("Preço total: R$ %.2f\n\n", quantia);      
             break; 
 
         default:
