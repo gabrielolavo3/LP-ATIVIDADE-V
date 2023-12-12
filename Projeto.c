@@ -18,7 +18,7 @@ int main ( ) {
   int opcao, a = 0, b = 0, c = 0;
   char nome[250][250], busca_Produto;
   int quantidade[250];
-  float quantia, retirada,  quant_Atual;
+  float quantia, retirada,  quant_Atual = 0;
   float preco_do_produto[250];
   char codigo_do_produto[250][250];
   
@@ -62,26 +62,12 @@ int main ( ) {
              printf ("Preço total: R$ %2f\n\n", quantia);      
             break; 
 
-          case 3:
-            setbuf (stdin, 0);
-            printf ("Informe o produto que deseja enviar para outra unidade: ");
-            gets (busca_Produto);
-
-            for (c = 0; c < a; c++ ) {
-              if (strcmp (busca_Produto, nome[c]) == 0) {
-                printf ("Digite a quantidade de retirada: ");
-                scanf ("%f", &retirada); }           
-            }
-            printf ("Quantidade disponível em estoque: %.2f\n", quant_Atual = quantidade - retirada);
-
-          break;
-
         default:
             printf ("\nOpção Inválida! Por favor, selecione uma das opções disponíveis\n\n");
             break;
         }
 
-    } while (opcao != 3);
+    } while (opcao != 2);
 
     return 0;
 }
